@@ -1,74 +1,73 @@
 //U10416022
-
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.shape.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
-import javafx.scene.text.Text;
-import javafx.scene.control.Button;
+import javafx.scene.text.*;
 import java.util.Random;
-
+import javafx.animation.PathTransition;
+import javafx.scene.paint.Paint;
+import javafx.util.Duration;
 
 public class BeanMachine extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		//new pane
+		// new pane
 		Pane beanpane = new Pane();
 
-		//create line 
-		
-		Line line1 = new Line(280,65,280,40);
+		// create line
+
+		Line line1 = new Line(280, 65, 280, 40);
 		line1.setStroke(Color.BLACK);
 
-		Line line2 = new Line(230,65,230,40);
+		Line line2 = new Line(230, 65, 230, 40);
 		line2.setStroke(Color.BLACK);
 
-		Line line3 = new Line(280,65,455,280);
+		Line line3 = new Line(280, 65, 455, 280);
 		line3.setStroke(Color.BLACK);
 
-		Line line4 = new Line(455,365,55,365);
+		Line line4 = new Line(455, 365, 55, 365);
 		line4.setStroke(Color.BLACK);
 
-		Line line5 = new Line(230,65,55,280);
+		Line line5 = new Line(230, 65, 55, 280);
 		line5.setStroke(Color.BLACK);
 
-		Line line6 = new Line(455,280,455,365);
+		Line line6 = new Line(455, 280, 455, 365);
 		line6.setStroke(Color.BLACK);
 
-		Line line7 = new Line(55,280,55,365);
-		line7.setStroke(Color.BLACK);		
+		Line line7 = new Line(55, 280, 55, 365);
+		line7.setStroke(Color.BLACK);
 
-		Line line8 = new Line(105,280,105,365);
+		Line line8 = new Line(105, 280, 105, 365);
 		line8.setStroke(Color.BLACK);
 
-		Line line9 = new Line(155,280,155,365);
+		Line line9 = new Line(155, 280, 155, 365);
 		line9.setStroke(Color.BLACK);
 
-		Line line10 = new Line(205,280,205,365);
+		Line line10 = new Line(205, 280, 205, 365);
 		line10.setStroke(Color.BLACK);
-	
-		Line line11 = new Line(255,280,255,365);
+
+		Line line11 = new Line(255, 280, 255, 365);
 		line11.setStroke(Color.BLACK);
 
-		Line line12 = new Line(305,280,305,365);
+		Line line12 = new Line(305, 280, 305, 365);
 		line12.setStroke(Color.BLACK);
 
-		Line line13 = new Line(405,280,405,365);
+		Line line13 = new Line(405, 280, 405, 365);
 		line13.setStroke(Color.BLACK);
 
-		Line line14 = new Line(355,280,355,365);
+		Line line14 = new Line(355, 280, 355, 365);
 		line14.setStroke(Color.BLACK);
 
-		//get all lines on the pane
-		beanpane.getChildren().addAll(line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14);
+		// get all lines on the pane
+		beanpane.getChildren().addAll(line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11,
+				line12, line13, line14);
 
-		//new 28 circles
-		//row 1 
+		// new 28 circles
+		// row 1
 		Circle circle1 = new Circle();
 		circle1.setCenterX(255.0f);
 		circle1.setCenterY(100.0f);
@@ -76,7 +75,7 @@ public class BeanMachine extends Application {
 		circle1.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle1);
 
-		//row 2 
+		// row 2
 		Circle circle2 = new Circle();
 		circle2.setCenterX(230.0f);
 		circle2.setCenterY(130.0f);
@@ -91,7 +90,7 @@ public class BeanMachine extends Application {
 		circle3.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle3);
 
-		//row 3
+		// row 3
 		Circle circle4 = new Circle();
 		circle4.setCenterX(205.0f);
 		circle4.setCenterY(160.0f);
@@ -113,8 +112,7 @@ public class BeanMachine extends Application {
 		circle6.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle6);
 
-		
-		//row 4
+		// row 4
 		Circle circle7 = new Circle();
 		circle7.setCenterX(180.0f);
 		circle7.setCenterY(190.0f);
@@ -135,7 +133,7 @@ public class BeanMachine extends Application {
 		circle9.setRadius(9.0f);
 		circle9.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle9);
-		
+
 		Circle circle10 = new Circle();
 		circle10.setCenterX(330.0f);
 		circle10.setCenterY(190.0f);
@@ -143,7 +141,7 @@ public class BeanMachine extends Application {
 		circle10.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle10);
 
-		//row 5
+		// row 5
 		Circle circle11 = new Circle();
 		circle11.setCenterX(155.0f);
 		circle11.setCenterY(220.0f);
@@ -179,8 +177,7 @@ public class BeanMachine extends Application {
 		circle15.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle15);
 
-
-		//row 6
+		// row 6
 		Circle circle16 = new Circle();
 		circle16.setCenterX(130.0f);
 		circle16.setCenterY(250.0f);
@@ -223,7 +220,7 @@ public class BeanMachine extends Application {
 		circle21.setFill(Color.BLACK);
 		beanpane.getChildren().add(circle21);
 
-		//row 7
+		// row 7
 		Circle circle22 = new Circle();
 		circle22.setCenterX(105.0f);
 		circle22.setCenterY(280.0f);
@@ -271,34 +268,30 @@ public class BeanMachine extends Application {
 		circle28.setCenterY(280.0f);
 		circle28.setRadius(9.0f);
 		circle28.setFill(Color.BLACK);
-		beanpane.getChildren().add(circle28);	
+		beanpane.getChildren().add(circle28);
 
-		//create the scene
-		Scene scene = new Scene(beanpane,550,430);
+		// create the scene
+		Scene scene = new Scene(beanpane, 550, 400);
 		primaryStage.setTitle("BeanMachine");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
-		//new text
-		Text text = new Text(20, 20, "Click here to start!");
+		// new text
+		Text text = new Text(10, 30,"click here to start!");
+		text.setFill(Color.GRAY);
+		text.setFont(Font.font(25));
 		beanpane.getChildren().addAll(text);
-		
-		//
+
+		// add action(mousepressed)
 		text.setOnMousePressed(e -> {
-			Circle ball = new Circle();
-			ball.setCenterX(255.0f);
-			ball.setCenterY(50.0f);
-			ball.setRadius(7.0f);
-			ball.setFill(Color.TOMATO);
+			// Use array to set the ball color at random
+			Random random = new Random();
+			Paint[] color = { Color.TOMATO, Color.SKYBLUE, Color.YELLOW, Color.PURPLE, Color.SPRINGGREEN };
+			int ballcolor = random.nextInt(5);
+			BallPath ball = new BallPath(255, 50, 6.5, (Paint) color[ballcolor]);
 			beanpane.getChildren().add(ball);
-			
-		
+			ball.RollBall();
+		});
 
-				
-				
-				
-		 });
-
-		
 	}
 }
