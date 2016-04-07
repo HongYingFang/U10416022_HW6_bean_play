@@ -22,8 +22,7 @@ public class BallPath extends Circle {
 		double Y = this.getCenterY();
 		//new random
 		Random random = new Random();
-		
-		//the path get X and Y 's initial value
+		//the path get the X and Y value
 		path.getElements().add(new MoveTo(this.getCenterX(), this.getCenterY()));
 
 		// use for loop to choose the ball's path at random
@@ -37,13 +36,20 @@ public class BallPath extends Circle {
 				X = X - 25.5;
 				Y = Y + 33.5;
 			}
-      //the path get X and Y 's value
+
 			path.getElements().add(new LineTo(X, Y));
 		}
-		 //the path get X and Y 's end value
-		path.getElements().add(new LineTo(X, Y+75));
 		
-	
+		path.getElements().add(new LineTo(X, Y+75));
+		// new PathTransition
+		PathTransition ptball = new PathTransition();
+		ptball.setDuration(Duration.millis(3000));
+		ptball.setPath(path);
+		ptball.setNode(this);
+		ptball.setOrientation(PathTransition.OrientationType.NONE);
+		ptball.setCycleCount(1);
+		ptball.play();
 	}
 
 }
+
