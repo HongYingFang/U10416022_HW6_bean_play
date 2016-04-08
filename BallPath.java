@@ -40,10 +40,10 @@ public class BallPath extends Circle {
 			path.getElements().add(new LineTo(X, Y));
 		}
 		
-		path.getElements().add(new LineTo(X, Y+75));
+		path.getElements().add(new LineTo(X, Y+73));
 		// new PathTransition
 		PathTransition ptball = new PathTransition();
-		ptball.setDuration(Duration.millis(3000));
+		ptball.setDuration(Duration.millis(2000));
 		ptball.setPath(path);
 		ptball.setNode(this);
 		ptball.setOrientation(PathTransition.OrientationType.NONE);
