@@ -17,7 +17,7 @@ public class BeanMachine extends Application {
 
 		// new pane
 		Pane beanpane = new Pane();
-
+		
 		// create line
 		Line line1 = new Line(280, 65, 280, 40);
 		line1.setStroke(Color.BLACK);
